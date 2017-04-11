@@ -16,7 +16,7 @@ function myMain (evt) {
 
             backgroundGradientDOM.style.display = "none";
 
-            bodyDOM.insertAdjacentHTML("beforeend", "<div style='height:100vh; background-color: #add8e6;'><div style='text-align:center; color:white; font-size: 150px; font-weight:800; padding-top:35vh;'>"+billsAmountDueDOM.innerText+"</div></div>");
+            bodyDOM.insertAdjacentHTML("beforeend", "<div style='height:100vh; background-color: #add8e6;'><div style='text-align:center; color:white; font-size: 150px; font-weight:800; padding-top:35vh;'>"+billsAmountDueDOM.innerText+"</div><div style='text-align: center;'><a href='/bills.event' style='font-size: 18px; font-weight: 800;'>Update My Bills</a></div></div>");
         }
     }
 }
