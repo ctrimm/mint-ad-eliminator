@@ -1,0 +1,12 @@
+{
+  "name": "Mint Ad Eliminator",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Remove Advertisements on Mint.com Dashboard",
+  "content_scripts": [ {
+      "matches": ["*://*/*"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    } ],
+  "permissions": []
+}
