@@ -4,20 +4,19 @@ function myMain (evt) {
     var jsInitChecktimer = setInterval (checkForJS_Finish, 111);
 
     function checkForJS_Finish () {
-        // var adviceDOM = document.querySelector(".AdviceView")
+        var backgroundGradientDOM = document.querySelector(".background-gradient");
+        var bodyDOM = document.querySelector("#body-mint");
+
         var billsAmountDueDOM = document.querySelector(".billsAmountDue");
         var systemMessagesDOM = document.querySelector("#systemMessages");
-        var mainSectionDOM = document.querySelector(".pageContents");
+        var overviewSelectedDOM = document.querySelector("li#overview .selected");
 
-        if (billsAmountDueDOM && mainSectionDOM && systemMessagesDOM && window.location.href.indexOf("https://mint.intuit.com/overview.event") > -1) {
+        if (backgroundGradientDOM && billsAmountDueDOM && bodyDOM && overviewSelectedDOM && systemMessagesDOM && window.location.href.indexOf("https://mint.intuit.com/overview.event") > -1) {
             clearInterval (jsInitChecktimer);
-            alert("your url is mint.com");
-            // adviceDOM.style.display = "none";
-            console.log('billsAmountDue - ', billsAmountDueDOM.innerText);
 
-            systemMessagesDOM.insertAdjacentHTML("beforeend", "<div style='text-align:center; color:red; font-size: 72px;'>"+billsAmountDueDOM.innerText+"</div>");
+            backgroundGradientDOM.style.display = "none";
 
-            mainSectionDOM.style.display = "none";
+            bodyDOM.insertAdjacentHTML("beforeend", "<div style='height:100vh; background-color: #add8e6;'><div style='text-align:center; color:white; font-size: 150px; font-weight:800; padding-top:35vh;'>"+billsAmountDueDOM.innerText+"</div></div>");
         }
     }
 }
